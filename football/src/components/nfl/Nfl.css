@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 189.33px;
+  height: 126.38px;
+}
+
+.headCoach {
+  text-align: left;
+}
+.dc {
+  text-align: left;
+  margin-top: -10px;
+}
+.oc {
+  text-align: left;
+  margin-top: -15px;
+}
