@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react'
 import Card from '../card/Card'
 import './Nfl.css'
 
-
+// Add filtering by division and conference
+// Working on teamRoster component this way when i click on the team name in this 
+// component it will bring me to the team roster with all of the active players
 
 const Nfl = () => {
 
@@ -26,10 +28,10 @@ const Nfl = () => {
 
   return (
     <div className='container'>
-      {teams.map(({ City, key, FullName, DefensiveCoordinator, HeadCoach, OffensiveCoordinator, StadiumDetails, PrimaryColor, SecondaryColor, Conference, Division, WikipediaLogoUrl, WikipediaWordMarkUrl }) => (
-        <Card key={key}>
+      {teams.map(({ City, Key, FullName, DefensiveCoordinator, HeadCoach, OffensiveCoordinator, StadiumDetails, PrimaryColor, SecondaryColor, Conference, Division, WikipediaLogoUrl, WikipediaWordMarkUrl }) => (
+        <Card key={Key}>
           <div>
-            <h2 style={{ 'color': '#' + PrimaryColor }}>{FullName}</h2>
+            <h2 className='teamName'><a style={{ 'color': '#' + PrimaryColor }} href={`/${Key}`}>{FullName}</a></h2>
             <h4>{Conference} {Division}</h4>
             <img src={WikipediaLogoUrl} />
             <h5 className='headCoach'>Head Coach: {HeadCoach}</h5>
