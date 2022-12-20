@@ -35,6 +35,11 @@ const Nfl = () => {
             <h5 className='headCoach'>Head Coach: {HeadCoach}</h5>
             <h5 className='oc'>Offensive Coordinator: {OffensiveCoordinator === null ? "No Offensive Coordinator" : OffensiveCoordinator}</h5>
             <h5 className='dc'>Defensive Coordinator: {DefensiveCoordinator === null ? "No Denfensive Coordinator" : DefensiveCoordinator}</h5>
+            <h4>Stadium Details</h4>
+            <h5 className='stadiumName'>{StadiumDetails?.Name}</h5>
+            <h5 className='stadiumLocation'>{StadiumDetails?.City}, {StadiumDetails?.State}</h5>
+            <h5 className='stadiumSurface'>Playing Surface: {StadiumDetails?.PlayingSurface}</h5>
+            <h5 className='stadiumType'>{StadiumDetails?.Type}</h5>
           </div>
         </Card>
       ))}

@@ -13,9 +13,29 @@ img {
 }
 .dc {
   text-align: left;
-  margin-top: -10px;
+  margin-top: -15px;
 }
 .oc {
   text-align: left;
   margin-top: -15px;
+}
+.stadiumName {
+  text-align: left;
+  margin-top: -15px;
+
+}
+.stadiumLocation {
+  text-align: left;
+  margin-top: -15px;
+
+}
+.stadiumSurface {
+  text-align: left;
+  margin-top: -15px;
+
+}
+.stadiumType {
+  text-align: left;
+  margin-top: -15px;
+
 }
