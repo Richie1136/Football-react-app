@@ -7,7 +7,7 @@ import Loading from "../loading/Loading"
 
 
 const TeamRoster = () => {
-  const [roster, setRoster] = useState([])
+  const [roster, setRoster] = useState()
   const [initialRoster, setInitialRoster] = useState(roster)
   const [filteredResults, setFilteredResults] = useState(undefined)
 
@@ -35,13 +35,12 @@ const TeamRoster = () => {
   }, [])
 
 
-  if (!roster) return <Loading />
 
-
-  let wholeRoster = roster.filter((status) => status.Status === 'Active')
+  let wholeRoster = roster?.filter((status) => status.Status === 'Active')
   let displayData = wholeRoster
 
-  console.log(wholeRoster)
+  if (!roster) return <Loading />
+
 
   let Offense = wholeRoster?.filter((position) => position.PositionCategory === 'OFF')
   let QuarterBacks = wholeRoster?.filter((position) => position.Position === 'QB')
@@ -67,9 +66,6 @@ const TeamRoster = () => {
   let Kicker = wholeRoster?.filter((position) => position.Position === 'K')
   let Punter = wholeRoster?.filter((position) => position.Position === 'P')
   let LongSnapper = wholeRoster?.filter((position) => position.Position === 'LS')
-
-
-  console.log(DefensiveBacks.length > 0 ? "Defensive Backs" : "NA")
 
 
   const handleChange = (event) => {

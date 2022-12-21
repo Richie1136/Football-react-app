@@ -1,11 +1,12 @@
 import './App.css';
 import Nfl from './components/nfl/Nfl';
 import ApplicationRoutes from './routes';
+import Navigation from './components/navigation/Navigation';
 
 function App() {
   return (
     <div className="App">
-      <h2>Football</h2>
+      <Navigation />
       <ApplicationRoutes />
     </div>
   );

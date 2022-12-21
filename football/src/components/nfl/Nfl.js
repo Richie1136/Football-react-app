@@ -41,7 +41,7 @@ const Nfl = () => {
             <h5 className='stadiumName'>{StadiumDetails?.Name}</h5>
             <h5 className='stadiumLocation'>{StadiumDetails?.City}, {StadiumDetails?.State}</h5>
             <h5 className='stadiumSurface'>Playing Surface: {StadiumDetails?.PlayingSurface}</h5>
-            <h5 className='stadiumType'>{StadiumDetails?.Type}</h5>
+            <h5 className='stadiumType'>Stadium Type: {StadiumDetails?.Type}</h5>
           </div>
         </Card>
       ))}
