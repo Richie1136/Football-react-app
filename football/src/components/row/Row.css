@@ -1,0 +1,102 @@
+.stats-standings {
+  border-bottom: 3px solid #ebe9e7;
+}
+
+/* .Positive {
+  color: #094;
+}
+
+.Negative {
+  color: #d00;
+} */
+
+.city-name {
+  width: 200px;
+  align-items: center;
+  display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+td:first-child {
+  border-right: 4px solid #eee;
+}
+
+.teamName {
+  width: 200px;
+  height: 40px;
+  padding: 0 15px;
+}
+
+td.city-name a {
+  color: #06c
+}
+
+.team-winorl {
+  width: 58.03px;
+}
+
+.winper {
+  width: 86.98px;
+}
+
+.conrecord {
+  width: 85.28px;
+}
+
+
+.last10 {
+  width: 109.98px;
+}
+
+.streak {
+  width: 112.19px;
+  }
+
+  td {
+    padding: 8px 6px;
+    font: 14px "Roboto Condensed", Arial, sans-serif;
+background-color: #FFFFFF;
+height: 41px;
+font-weight: 400;
+line-height: 1.25;
+border-style: solid;
+font-weight: 400;
+    font-size: .875rem;
+    font-family: Roboto Condensed,Arial,sans-serif;
+    line-height: 1.25;
+    text-align: left;
+    white-space: nowrap;
+    background-color: #fff;
+    color: #000;
+    border-top: 1px #ebe9e7;
+    font-stretch: condensed;
+  }
+
+  tbody:nth-child(11) {
+    border-bottom: 2px dashed #0268d6;
+  }
+
+  tbody:nth-child(15) {
+    border-bottom: 2px solid #0268d6;
+  }
+
+  tbody:nth-child(30) {
+    border-bottom: 2px dashed #0268d6;
+  }
+
+  tbody:nth-child(34) {
+    border-bottom: 2px solid #0268d6;
+  }
+/* 
+  tbody::after {
+        content: "";
+    box-shadow: 2px 0 5px -2px hsl(0deg 0% 39% / 20%);
+    position: absolute;
+     top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+  } */
