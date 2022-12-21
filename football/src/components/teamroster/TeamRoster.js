@@ -55,6 +55,7 @@ const TeamRoster = () => {
   let OffensiveTackle = wholeRoster?.filter((position) => position.Position === 'OT')
   let Defense = wholeRoster?.filter((position) => position.PositionCategory === 'DEF')
   let DefensiveTackle = wholeRoster?.filter((position) => position.Position === 'DT')
+  let DefensiveLine = wholeRoster?.filter((position) => position.Position === 'DL')
   let DefensiveEnd = wholeRoster?.filter((position) => position.Position === 'DE')
   let LineBackers = wholeRoster?.filter((position) => position.Position === 'LB')
   let InsideLineBackers = wholeRoster?.filter((position) => position.Position === 'ILB')
@@ -117,6 +118,9 @@ const TeamRoster = () => {
   if (initialRoster === 'DT') {
     displayData = DefensiveTackle
   }
+  if (initialRoster === 'DL') {
+    displayData = DefensiveLine
+  }
   if (initialRoster === 'LB') {
     displayData = LineBackers
   }
@@ -152,11 +156,16 @@ const TeamRoster = () => {
   let doHaveOT = OffensiveTackle.length > 0 ? "Offensive Tackle" : "N/A"
   let doHaveOL = OffensiveLine.length > 0 ? "Offensive Line" : "N/A"
   let doHaveCenter = Center.length > 0 ? "Center" : "N/A"
-  let doHaveDB = DefensiveBacks.length > 0 ? "Defensive Backs" : "N/A"
-  let doHaveCB = CornerBacks.length > 0 ? "Corner Backs" : "N/A"
-  let doHaveFB = FullBack.length > 0 ? "Full Backs" : "N/A"
-  let doHaveOLB = OutsideLineBackers.length > 0 ? "OutsideLineBackers" : "N/A"
-  let doHaveILB = InsideLineBackers.length > 0 ? "InsideLineBackers" : "N/A"
+  let doHaveDL = DefensiveLine.length > 0 ? "Defensive Line" : "N/A"
+  let doHaveDT = DefensiveTackle.length > 0 ? "Defensive Tackle" : "N/A"
+  let doHaveDE = DefensiveEnd.length > 0 ? "Defensive End" : "N/A"
+  let doHaveDB = DefensiveBacks.length > 0 ? "Defensiveback" : "N/A"
+  let doHaveLB = LineBackers.length > 0 ? "Linebacker" : "N/A"
+  let doHaveCB = CornerBacks.length > 0 ? "Cornerback" : "N/A"
+  let doHaveSafety = Safety.length > 0 ? "Safety" : "N/A"
+  let doHaveFB = FullBack.length > 0 ? "Full Back" : "N/A"
+  let doHaveOLB = OutsideLineBackers.length > 0 ? "Outside Linebacker" : "N/A"
+  let doHaveILB = InsideLineBackers.length > 0 ? "Inside Linebacker" : "N/A"
 
 
   return (
@@ -166,10 +175,10 @@ const TeamRoster = () => {
           <option multiple={false} value={"ALL"}>ALL</option>
           <option multiple={false} value={"Offense"}>Offense</option>
           <option>- - --</option>
-          <option multiple={false} value={"QuarterBacks"}>Quarterbacks</option>
-          <option multiple={false} value={"RunningBacks"}>Runningbacks</option>
+          <option multiple={false} value={"QuarterBacks"}>Quarterback</option>
+          <option multiple={false} value={"RunningBacks"}>Running Back</option>
           <option multiple={false} value={"FullBack"}>{doHaveFB}</option>
-          <option multiple={false} value={"Wideout"}>Wideouts</option>
+          <option multiple={false} value={"Wideout"}>Wide Receiver</option>
           <option multiple={false} value={"TightEnd"}>Tight End</option>
           <option multiple={false} value={"Offensive Line"}>{doHaveOL}</option>
           <option multiple={false} value={"Center"}>{doHaveCenter}</option>
@@ -177,14 +186,15 @@ const TeamRoster = () => {
           <option multiple={false} value={"Offensive Tackle"}>{doHaveOT}</option>
           <option multiple={false} value={"Defense"}>Defense</option>
           <option>- - --</option>
-          <option multiple={false} value={"DT"}>Defensive Tackle</option>
-          <option multiple={false} value={"DE"}>Defensive End</option>
-          <option multiple={false} value={"LB"}>LineBacker</option>
+          <option multiple={false} value={"DT"}>{doHaveDT}</option>
+          <option multiple={false} value={"DL"}>{doHaveDL}</option>
+          <option multiple={false} value={"DE"}>{doHaveDE}</option>
+          <option multiple={false} value={"LB"}>{doHaveLB}</option>
           <option multiple={false} value={"ILB"}>{doHaveILB}</option>
           <option multiple={false} value={"OLB"}>{doHaveOLB}</option>
           <option multiple={false} value={"DefensiveBacks"}>{doHaveDB}</option>
           <option multiple={false} value={"CornerBacks"}>{doHaveCB}</option>
-          <option multiple={false} value={"Safety"}>Safety</option>
+          <option multiple={false} value={"Safety"}>{doHaveSafety}</option>
           <option multiple={false} value={"SpecialTeams"}>Special Teams</option>
           <option>- - --</option>
           <option multiple={false} value={"Kicker"}>Kicker</option>
