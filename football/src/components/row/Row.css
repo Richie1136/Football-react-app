@@ -20,8 +20,32 @@
 
 }
 
+.divwinper {
+  width: 64.99px;
+}
+
+td:nth-child(5) {
+  border-right: 1px solid #eee;
+}
+
 td:first-child {
   border-right: 4px solid #eee;
+}
+
+.pointsFor {
+  width: 54.94px;
+}
+
+.pointsAgainst {
+  width: 54.42px;
+}
+
+.netPoints {
+  width: 74.38px;
+}
+
+.divrecord {
+  width: 78.93px;
 }
 
 .teamName {
@@ -30,33 +54,45 @@ td:first-child {
   padding: 0 15px;
 }
 
-td.city-name a {
-  color: #06c
-}
-
 .team-winorl {
   width: 58.03px;
 }
 
 .winper {
-  width: 86.98px;
+  width: 66.23px;
 }
 
 .conrecord {
-  width: 85.28px;
+  width: 76.31px;
 }
 
-
-.last10 {
-  width: 109.98px;
+.confwinper {
+  width: 64.99px;
 }
 
+.nonConf {
+  width: 85.35px;
+}
+
+.teamWin {
+  width: 49.11px;
+}
+
+.teamLosses {
+  width: 39.53px;
+}
+
+.teamTies {
+  width: 39.53px;
+}
+
+/* 
 .streak {
   width: 112.19px;
-  }
+  } */
 
   td {
-    padding: 8px 6px;
+    /* padding: 8px 6px;
     font: 14px "Roboto Condensed", Arial, sans-serif;
 background-color: #FFFFFF;
 height: 41px;
@@ -72,31 +108,47 @@ font-weight: 400;
     background-color: #fff;
     color: #000;
     border-top: 1px #ebe9e7;
-    font-stretch: condensed;
+    font-stretch: condensed; */
+    padding: 0 15px;
+    border-color: transparent;
+    white-space: nowrap;
+    /* text-align: left; */
+    position: relative;
+    height: 40px;
+    color: #333333;
+    font: 12px All-ProStats, Helvetica, Arial, sans-serif;
+    border-bottom: 1px solid #eee;
+    font-weight: 100;
   }
 
-  tbody:nth-child(11) {
-    border-bottom: 2px dashed #0268d6;
+  td:not(:first-child) {
+    text-align: left;
   }
 
-  tbody:nth-child(15) {
-    border-bottom: 2px solid #0268d6;
+  td:first-of-type {
+    font-family: All-ProSans,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    min-width: 200px;
+    width: 200px;
+    text-align: left;
   }
 
-  tbody:nth-child(30) {
-    border-bottom: 2px dashed #0268d6;
+  td:nth-child(11) {
+    border-right: 1px solid #eee;
   }
 
-  tbody:nth-child(34) {
-    border-bottom: 2px solid #0268d6;
+  td:nth-child(13) {
+    border-right: 1px solid #eee;
   }
-/* 
-  tbody::after {
-        content: "";
-    box-shadow: 2px 0 5px -2px hsl(0deg 0% 39% / 20%);
-    position: absolute;
-     top: 0;
-    right: 0;
-    width: 10px;
+
+  .winper::after {
+    background: #000;
+    content: "";
     height: 100%;
-  } */
+    left: 0;
+    opacity: .04;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  } 

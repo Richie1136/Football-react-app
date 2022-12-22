@@ -21,48 +21,85 @@ table {
 
 .wins {
   width: 49.11px;
-  height: 40px;
 }
 
 .lort {
   width: 39.53px;
-  height: 40px;
 }
 
 .header {
   width: 200px;
-  height: 40px;
   color: #333333;
-  padding: 0 15px;
   min-width: 200px;
   text-align: left;
 }
 
-/* .division-name {
-  width: 170px;
-  height: 32px;
-  color: #ffffff;
-  font-size: 12px;
-  padding: 0 16px;
-} */
+.pointsScored {
+  width: 54.94px;
+}
+
+
+.pointsAganist {
+  width: 54.42px;
+}
+
+.netPts {
+  width: 74.38px;
+}
+
+.pct {
+  width: 66.23px;
+  color: #151515;
+  font-weight: 700!important
+}
+
+.divPer {
+  width: 78.93px;
+}
+
+.conf {
+  width: 78.93px;
+}
+
+.touchdowns {
+  width: 30.38px;
+}
+
+th:nth-child(11) {
+  border-right: 1px solid #eee;
+}
+th:nth-child(13) {
+  border-right: 1px solid #eee;
+}
 
 th {
   color: #333333;
   padding: 0 15px;
+  border-bottom: 1px solid #eee;
+  font: 12px All-ProStats, Helvetica, Arial, sans-serif;
+  height: 40px;
+  font-weight: 400;
+}
+
+th:not(:first-child) {
+  text-align: left;
+}
+/* 
+th:nth-child(10) {
+  border-right: 1px solid #eee;
+} */
+
+.nonConf {
+  width: 87.68px;
 }
 
 /* th:first-child {
   border-right: 4px solid #eee;
 } */
 
-th span {
+/* th span {
   display: block;
-}
-
-
-.division-name span {
-  text-align: left;
-}
+} */
 
 
 
@@ -84,9 +121,8 @@ th span {
 }
 
 .div {
-  width: 64.7px;
-  height: 41px;
-  text-align: justify;
+width: 78.93px;
+height: 40px;
 }
 
 .tstreak {
@@ -96,10 +132,9 @@ th span {
 
 .runs {
   width: 32px;
-  height: 18px;
 }
 
-.home {
+/* .home {
   width: 89.8px;
   height: 41px;
   text-align: justify;
@@ -109,7 +144,7 @@ th span {
   width: 86.34px;
   height: 41px;
   text-align: justify;
-}
+} */
 /* 
 .division-title {
   width: 200px;
@@ -132,63 +167,22 @@ border-top: 1px solid #e5e7eb;
 
 } */
 
-/* th {
-  font: 10px "Roboto Condensed", Arial, sans-serif;
-  color: #343232;
-  padding: 14px 6px;
-  background-color: #ffffff;
-text-align: center;
-text-align: justify;
-letter-spacing: 1px;
-white-space: nowrap;
-vertical-align: bottom;
-display: table-cell;
-font-weight: bold;
-border-bottom: 1px solid #ebe9e7;
-vertical-align: bottom;
-text-align: right;
-white-space: nowrap;
-letter-spacing: 1px;
-font-size: 10px;
-padding: 14px 6px;
-;
-} */
 
 .conference-title {
-  /* padding: 2px 0;
-  height: 35px;
-  position: sticky;
-  color: #ffffff;
-  display: flex;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-family: Knockout Wide,sans-serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  padding-top: 70px;
-  margin-left: 20px; */
-  width: 242.78px;
+
   height: 13.89;
   color: #333333;
   font-size: 14px;
   letter-spacing: .2px;
   text-align: left;
   text-transform: none;
-  }
-
- /* .conference-west {
-  position: sticky;
+  align-items: center;
+  background-color: #fafafa;
+  box-shadow: inset 0 -1px 0 0 #ccc;
   display: flex;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-family: Knockout Wide,sans-serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  padding-top: 70px;
-  margin-top: 10px;
-  color: #ffffff;
-}  */
+  flex-basis: 100%;
+  flex-grow: 1;
+  height: 48px;
+  padding-left: 16px;
+  width: 100%;
+  }

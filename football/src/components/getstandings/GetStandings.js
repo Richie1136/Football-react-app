@@ -50,29 +50,24 @@ const GetStandings = () => {
           <span>PCT</span>
         </span>
       </th>
-      <th className='div'>
+      <th className='touchdowns'>
+        <span className='tstreak'>
+          <span>Touchdowns</span>
+        </span>
+      </th>
+      <th className='pointsScored'>
         <span className='runs'>
           <span>PF</span>
         </span>
       </th>
-      <th className='div'>
+      <th className='pointsAganist'>
         <span className='runs'>
           <span>PA</span>
         </span>
       </th>
-      <th className='div'>
+      <th className='netPts'>
         <span className='runs'>
           <span>Net Pts</span>
-        </span>
-      </th>
-      <th className='home'>
-        <span className='runs'>
-          <span>Home</span>
-        </span>
-      </th>
-      <th className='road'>
-        <span className='runs'>
-          <span>Road</span>
         </span>
       </th>
       <th className='div'>
@@ -80,7 +75,7 @@ const GetStandings = () => {
           <span>DIV</span>
         </span>
       </th>
-      <th className='pct'>
+      <th className='divPer'>
         <span className='runs'>
           <span>PCT</span>
         </span>
@@ -90,24 +85,14 @@ const GetStandings = () => {
           <span>CONF</span>
         </span>
       </th>
-      <th className='pct'>
+      <th className='divPer'>
         <span className='runs'>
           <span>PCT</span>
         </span>
       </th>
-      <th className='conf'>
+      <th className='nonConf'>
         <span className='runs'>
           <span>Non-Conf</span>
-        </span>
-      </th>
-      <th className='streak'>
-        <span className='tstreak'>
-          <span>STRK</span>
-        </span>
-      </th>
-      <th className='last10'>
-        <span className='runs'>
-          <span>LAST 5</span>
         </span>
       </th>
     </>
@@ -140,10 +125,10 @@ const GetStandings = () => {
               {headers}
             </tr>
           </tbody>
-          {AFCE?.map(({ Name, Conference, Division, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
+          {AFCE?.map(({ Name, Conference, Division, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
             PointsAgainst, NetPoints, Key, Team }) => (
 
-            <Row Key={Key} Name={Name} Team={Team} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+            <Row Key={Key} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
           ))}
           {/* <br />
           <h2 className='conference-west'>Western Conference</h2>
