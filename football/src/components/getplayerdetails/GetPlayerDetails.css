@@ -1,0 +1,360 @@
+*, ::before, ::after {
+  box-sizing: inherit
+}
+
+
+body {
+ margin: 0;
+ padding: 0;
+}
+
+div {
+  display: block;
+}
+
+.player-photo {
+  width: 285.83px;
+  height: 208.87px;
+  margin: 96px 28.5859px 0px;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: solid;
+}
+
+.player-vitals {
+  width: 686px;
+  height: 304.87px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.player-bio {
+  width: 225.37px;
+  height: 116px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.player-header-summary {
+  width: 225.37px;
+  height: 20px;
+ font: 16px Roboto, Arial, sans-serif;
+    color: #fff;
+}
+.player-header-name {
+  height: 48px;
+  font: 60px 'Knockout Wide', sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+margin: 0;
+padding: 0;
+width: max-content;
+}
+
+.player-photo {
+  width: 285.83px;
+  height: 208.87px;
+  margin: 96px 28.5859px 0px;
+  display: block;
+}
+
+
+.player-header-number {
+  width: 225.37px;
+  height: 20px;
+ font: 16px Roboto, Arial, sans-serif;
+    color: #fff;
+    margin-top: 60px;
+}
+
+.player-header {
+  width: 623.94px;
+  height: 255px;
+  padding: 40px 0 20px 10px;
+  display: flex;
+  margin-top: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 255px;
+  min-height: 255px;
+  padding: 40px 0 20px 10px;
+  width: 50%;
+  z-index: 2;
+  color: #333;
+  font-family: All-ProSans,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.player-header-title {
+  width: 263.24px;
+  height: 37.99px;
+  color: #333333;
+  margin: 0 0 8px;
+  font-family: All-ProSans,Helvetica,Arial,sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  display: block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.player-headdr-data {
+  width: 66.33px;
+  height: 20px;
+  color:#333333;
+  font-size: 16px;
+    line-height: 20px;
+    font-family: All-ProSans,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+.player-header-position {
+  width: 27.4px;
+  height: 16.11px;
+  color: #333;
+  font-family: All-ProSans,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+span {
+width: 102.88px;
+height: 16.11px;
+font-size: 16px;
+}
+
+.player-header-team {
+  width: 115.21px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.rosterlink {
+  width: 115.21px;
+  height: 13.89px;
+  color: #1B48E0;
+}
+
+a[href]:not([title]) {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,button {
+  transition: 3s;
+}
+
+.player-info-section {
+  width: 832.01px;
+  height: 267.95px;
+  grid-gap: 0;
+}
+
+.grid-inner {
+  width: 832.01px;
+  height: 267.95px;
+  grid-gap: 12px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 20px 16px;
+}
+
+.player-info-title {
+  width: 800.01px;
+  height: 25.99px;
+}
+
+.player-info {
+  width: 153.35px;
+  color: #ffffff;
+  font: 12px Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.player-details {
+  width: 1189px;
+  height: 119px;
+  padding: 0 80px;
+  position: relative;
+  color: #fff;
+  margin-top: -35px;
+}
+
+.sub-section-header {
+  width: 102.88px;
+  height: 25.99px;
+  color: #333;
+  font-family: All-ProSans,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.sub-section-title {
+  width: 107px;
+  height: 17.99px;
+  font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nfl-player-info-content {
+  width: 800.01px;
+  height: 188.97px;
+  flex-wrap: wrap;
+}
+
+.nfl-player-info-physical-data {
+  width: 939.22px;
+  height: 64.99px;
+  display: flex;
+    flex-basis: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 24px;
+}
+
+.nfl-player-info-physical-data-item {
+  width: 200px;
+  height: 40px;
+  flex-basis: 25%;
+}
+
+.player-info-key {
+  width: 200px;
+  height: 20px;
+  display: flex;
+  flex-basis: 100%;
+  line-height: 20px;
+  color: #757575;
+  font-size: 12px;
+}
+
+.player-info-value {
+  width: 200px;
+  height: 20px;
+  font-family: All-ProSans,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    display: flex;
+    flex-basis: 100%;
+}
+
+.nfl-player-info-career-data {
+  width: 800.01px;
+  height: 123.98px;
+  padding: 24px 0 0;
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  padding-top: 24px;
+}
+
+.nfl-player-experience {
+  width: 400px;
+  height: 37.99px;
+  flex-basis: 50%;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.player-data {
+  /* width: 778px; */
+  /* width: 1189px; */
+  width: 932px;
+  height: 119px;
+  padding: 0 80px;
+  position: relative;
+  color: #fff;
+  margin-top: 70px;
+  border-bottom: 1px solid gray;
+  display: inline-block;
+}
+
+li {
+  margin-top: 0;
+}
+
+h4.players-birthday {
+  width: 200px;
+  font-size: 16px;
+  display: flex;
+  margin-left: -38px;
+}
+
+.noSalaryFound {
+  width: 200px;
+  margin-left: -30px;
+}
+
+.players-birthcountry {
+  width: 300px;
+  flex-wrap: nowrap;
+  margin-left: -40px;
+}
+
+div {
+  display: block;
+}
+
+.player-vitals ul {
+  font-size: 1.145rem;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1.2;
+  float: left;
+  list-style-type: none;
+  border-right: 1px solid #ffffff;
+  margin-left: 1px;
+}
+
+.players-college {
+  flex-wrap: nowrap;
+}

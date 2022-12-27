@@ -25,6 +25,7 @@ const TeamRoster = () => {
   // Add ability to filter by position
 
 
+
   useEffect(() => {
     const retrieveRoster = async () => {
       const data = await fetch(endpoint)
@@ -34,11 +35,10 @@ const TeamRoster = () => {
     retrieveRoster()
   }, [])
 
-
-  console.log(roster)
-
   let wholeRoster = roster?.filter((status) => status.Status === 'Active')
   let displayData = wholeRoster
+
+  console.log(roster)
 
   if (!roster) return <Loading />
 
@@ -203,7 +203,7 @@ const TeamRoster = () => {
       </label>
       {displayData?.map(({ FirstName, PlayerID, LastName, Number, Age, BirthDate, College, Height, Position, PhotoUrl, Weight, ExperienceString }) => (
         <Card key={PlayerID}>
-          <h2><a href={`/:${PlayerID}`}>{FirstName} {LastName}</a></h2>
+          <h2><a href={`player/${PlayerID}`}>{FirstName} {LastName}</a></h2>
           <img src={PhotoUrl} alt='player-img' />
           <h4>#{Number}</h4>
           <h4>{Height}</h4>

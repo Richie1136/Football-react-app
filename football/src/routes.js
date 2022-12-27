@@ -10,7 +10,7 @@ const ApplicationRoutes = () => (
       <Route path='/' element={<Nfl />} />
       <Route path="/:team" element={<TeamRoster />} />
       <Route path="/standings" element={<GetStandings />} />
-      <Route path="/:PlayerID" element={<GetPlayerDetails />} />
+      <Route path="/player/:playerid" element={<GetPlayerDetails />} />
     </Routes>
   </>
 )

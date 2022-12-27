@@ -2,6 +2,7 @@ import { baseUrl } from '../../baseUrl'
 import { useState, useEffect } from 'react'
 import Card from '../card/Card'
 import './Nfl.css'
+import GetPlayerDetails from '../getplayerdetails/GetPlayerDetails'
 
 // Add filtering by division and conference
 // Working on teamRoster component this way when i click on the team name in this 
@@ -29,6 +30,8 @@ const Nfl = () => {
 
   let allTeams = teams
   let displayData = allTeams
+
+  console.log(teams)
 
 
   let AFC = teams?.filter((conf) => conf.Conference === 'AFC')
