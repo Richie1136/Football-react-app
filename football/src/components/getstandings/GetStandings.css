@@ -16,7 +16,9 @@ table {
   border-left: none;
   border-top: none;
   margin-top: 30px;
-  margin-left: 20px;
+  margin-left:auto; 
+  margin-right:auto;
+  /* margin-left: 20px; */
 }
 
 .wins {
@@ -43,6 +45,11 @@ table {
   width: 54.42px;
 }
 
+.divider {
+  margin-top: 5px;
+  border-bottom: none;
+}
+
 .netPts {
   width: 74.38px;
 }
@@ -51,11 +58,6 @@ table {
   width: 66.23px;
   color: #151515;
   font-weight: 700!important;
-  cursor: pointer;
-}
-
-.btn {
-  cursor: pointer;
 }
 
 .divPer {
@@ -80,10 +82,10 @@ th:nth-child(13) {
 th {
   color: #333333;
   padding: 0 15px;
-  border-bottom: 1px solid #eee;
   font: 12px All-ProStats, Helvetica, Arial, sans-serif;
   height: 40px;
   font-weight: 400;
+  border-bottom: 1px solid #eee;
 }
 
 th:not(:first-child) {
@@ -201,4 +203,5 @@ border-top: 1px solid #e5e7eb;
   height: 48px;
   padding-left: 16px;
   width: 100%;
+  margin-left: 545px;
   }

@@ -23,9 +23,6 @@ const Row = ({ DivisionLosses, DivisionWins, DivisionTies, Ties, Touchdowns, Poi
         <td className='conrecord'>{ConferenceWins}-{ConferenceLosses}-{ConferenceTies}</td>
         <td className='confwinper'>{getCunferenceWinPercentage.toFixed(3)}</td>
         <td className='nonConf'>{Wins - ConferenceWins}-{Losses - ConferenceLosses}-{Ties - ConferenceTies}</td>
-        {/* <td className='road'>{AwayWins}-{AwayLosses}</td>
-        <td className='last10'>{LastTenWins}-{LastTenLosses}</td>
-        <td className='streak'>{posorNegStreak}</td>  */}
       </tr>
     </tbody>
   )

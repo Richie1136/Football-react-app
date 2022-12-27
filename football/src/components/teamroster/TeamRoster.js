@@ -35,6 +35,7 @@ const TeamRoster = () => {
   }, [])
 
 
+  console.log(roster)
 
   let wholeRoster = roster?.filter((status) => status.Status === 'Active')
   let displayData = wholeRoster
@@ -202,8 +203,8 @@ const TeamRoster = () => {
       </label>
       {displayData?.map(({ FirstName, PlayerID, LastName, Number, Age, BirthDate, College, Height, Position, PhotoUrl, Weight, ExperienceString }) => (
         <Card key={PlayerID}>
-          <h2>{FirstName} {LastName}</h2>
-          <img src={PhotoUrl} />
+          <h2><a href={`/:${PlayerID}`}>{FirstName} {LastName}</a></h2>
+          <img src={PhotoUrl} alt='player-img' />
           <h4>#{Number}</h4>
           <h4>{Height}</h4>
           <h4>{Weight}</h4>

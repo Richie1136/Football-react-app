@@ -107,7 +107,7 @@ const Nfl = () => {
           <div>
             <h2 className='teamCity'><a style={{ 'color': '#' + PrimaryColor }} href={`/${Key}`}>{FullName}</a></h2>
             <h4>{Conference} {Division}</h4>
-            <img src={WikipediaLogoUrl} />
+            <img src={WikipediaLogoUrl} alt='team-logo' />
             <h5 className='headCoach' style={{ 'color': '#' + PrimaryColor }}>Head Coach: {HeadCoach}</h5>
             <h5 className='oc' style={{ 'color': '#' + PrimaryColor }}>Offensive Coordinator: {OffensiveCoordinator === null ? "No Offensive Coordinator" : OffensiveCoordinator}</h5>
             <h5 className='dc' style={{ 'color': '#' + PrimaryColor }}>Defensive Coordinator: {DefensiveCoordinator === null ? "No Denfensive Coordinator" : DefensiveCoordinator}</h5>
