@@ -50,7 +50,12 @@ table {
 .pct {
   width: 66.23px;
   color: #151515;
-  font-weight: 700!important
+  font-weight: 700!important;
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .divPer {
@@ -101,6 +106,17 @@ th:nth-child(10) {
   display: block;
 } */
 
+/* th.pct::before {
+  background: #000;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: .04;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}  */
 
 
 .teamw {

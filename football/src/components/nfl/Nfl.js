@@ -105,7 +105,7 @@ const Nfl = () => {
       {displayData.map(({ City, Key, FullName, DefensiveCoordinator, HeadCoach, OffensiveCoordinator, StadiumDetails, PrimaryColor, SecondaryColor, Conference, Division, WikipediaLogoUrl, WikipediaWordMarkUrl }) => (
         <Card key={Key}>
           <div>
-            <h2 className='teamName'><a style={{ 'color': '#' + PrimaryColor }} href={`/${Key}`}>{FullName}</a></h2>
+            <h2 className='teamCity'><a style={{ 'color': '#' + PrimaryColor }} href={`/${Key}`}>{FullName}</a></h2>
             <h4>{Conference} {Division}</h4>
             <img src={WikipediaLogoUrl} />
             <h5 className='headCoach' style={{ 'color': '#' + PrimaryColor }}>Head Coach: {HeadCoach}</h5>

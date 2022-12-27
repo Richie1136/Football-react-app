@@ -5,14 +5,15 @@ const Row = ({ DivisionLosses, DivisionWins, DivisionTies, Ties, Touchdowns, Poi
   let getDivisionWinPercentage = DivisionWins / (DivisionWins + DivisionLosses)
   let getCunferenceWinPercentage = ConferenceWins / (ConferenceWins + ConferenceLosses)
 
+
   return (
     <tbody>
       <tr className='stats-standings'>
-        <td className='teamName'>{Name}</td>
+        <td className='teamName'><a href={`/${Team}`}>{Name}</a></td>
         <td className='teamWin'>{Wins}</td>
         <td className='teamLosses'>{Losses}</td>
         <td className='teamTies'>{Ties}</td>
-        <td className='winper'>{Percentage.toFixed(3)}</td>
+        <td className='winper'>{Percentage?.toFixed(3)}</td>
         <td className='touchdowns'>{Touchdowns}</td>
         <td className='pointsFor'>{PointsFor}</td>
         <td className='pointsAgainst'>{PointsAgainst}</td>

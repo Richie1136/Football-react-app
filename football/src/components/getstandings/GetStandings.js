@@ -7,6 +7,7 @@ import './GetStandings.css'
 const GetStandings = () => {
 
   const [GetStandings, setGetStandings] = useState()
+  const [percentage, setPercentage] = useState([])
 
   const APIKEY = process.env.REACT_APP_API_KEY
 
@@ -21,12 +22,21 @@ const GetStandings = () => {
     getCurrentStandings()
   }, [])
 
-  console.log(GetStandings)
+  // console.log(GetStandings)
+
+  // console.log(GetStandings?.sort((a, b) => a.Percentage - b.Percentage))
+
 
   let AFCE = GetStandings?.filter((conf) => conf.Conference === 'AFC').filter((div) => div.Division === 'East')
+  let AFC = GetStandings?.filter((conf) => conf.Conference === 'AFC')
   let AFCN = GetStandings?.filter((conf) => conf.Conference === 'AFC').filter((div) => div.Division === 'North')
+  let AFCS = AFC?.filter((conf) => conf.Conference === 'AFC').filter((div) => div.Division === 'South')
+  let AFCW = GetStandings?.filter((conf) => conf.Conference === 'AFC').filter((div) => div.Division === 'West')
+  let NFCE = GetStandings?.filter((conf) => conf.Conference === 'NFC').filter((div) => div.Division === 'East')
+  let NFCN = GetStandings?.filter((conf) => conf.Conference === 'NFC').filter((div) => div.Division === 'North')
+  let NFCS = GetStandings?.filter((conf) => conf.Conference === 'NFC').filter((div) => div.Division === 'South')
+  let NFCW = GetStandings?.filter((conf) => conf.Conference === 'NFC').filter((div) => div.Division === 'West')
 
-  console.log(AFCE)
 
   let headers = (
     <>
@@ -100,20 +110,10 @@ const GetStandings = () => {
 
 
   return (
-    // <div className="standings-container">
-    //   <table>
-    //     {GetStandings?.map(({ Name, Wins }) => (
-    //       <>
-    //         <h3>{Name}</h3>
-    //         <h5>{Wins}</h5>
-    //       </>
-    //     ))}
-    //   </table>
-    // </div>
 
     <>
       <div className='background-container'>
-        <h2 className='conference-title'>American Football Conference</h2>
+        <h2 className='conference-title'>AMERICAN FOOTBALL CONFERENCE</h2>
         <table>
           <colgroup className='col1' span='6'></colgroup>
           <colgroup className='col2' span='2'></colgroup>
@@ -126,25 +126,97 @@ const GetStandings = () => {
             </tr>
           </tbody>
           {AFCE?.map(({ Name, Conference, Division, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
-            PointsAgainst, NetPoints, Key, Team }) => (
-
-            <Row Key={Key} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+            PointsAgainst, NetPoints, TeamID, Team }) => (
+            <Row key={TeamID} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
           ))}
-          {/* <br />
-          <h2 className='conference-west'>Western Conference</h2>
+          <br />
           <tbody>
             <tr className='division-row'>
-              <th className='division-name'>
-                <span>
-                  <span className='division-title'>TEAM</span>
-                </span>
-              </th>
+              <th className="header">AFC NORTH</th>
               {headers}
             </tr>
           </tbody>
-          {Western?.map(({ City, Name, Losses, Wins, Percentage, GamesBack, ConferenceWins, ConferenceLosses, DivisionWins, DivisionLosses, HomeWins, HomeLosses, AwayWins, AwayLosses, LastTenWins, LastTenLosses, Streak, PointsPerGameFor, PointsPerGameAgainst }) => (
-            <Row key={Name} Name={Name} City={City} Losses={Losses} Wins={Wins} Percentage={Percentage} GamesBack={GamesBack} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsPerGameFor={PointsPerGameFor} PointsPerGameAgainst={PointsPerGameAgainst} HomeLosses={HomeLosses} HomeWins={HomeWins} AwayLosses={AwayLosses} AwayWins={AwayWins} LastTenLosses={LastTenLosses} LastTenWins={LastTenWins} Streak={Streak} />
-          ))} */}
+          {AFCN?.map(({ Name, Conference, Division, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
+            PointsAgainst, NetPoints, TeamID, Team }) => (
+
+            <Row key={TeamID} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+          ))}
+          <br />
+          <tbody>
+            <tr className='division-row'>
+
+              <th className="header">AFC SOUTH</th>
+              {headers}
+            </tr>
+          </tbody>
+          {AFCS?.map(({ Name, Conference, Division, sortPercentage, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
+            PointsAgainst, NetPoints, TeamID, Team }) => (
+            <Row key={TeamID} Name={Name} Team={Team} sortPercentage={sortPercentage} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+          ))}
+          <br />
+          <tbody>
+            <tr className='division-row'>
+              <th className="header">AFC WEST</th>
+              {headers}
+            </tr>
+          </tbody>
+          {AFCW?.map(({ Name, Conference, Division, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
+            PointsAgainst, NetPoints, TeamID, Team }) => (
+            <Row key={TeamID} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+          ))}
+        </table>
+        <h2 className='conference-title'>NATIONAL FOOTBALL CONFERENCE</h2>
+        <table>
+          <colgroup className='col1' span='6'></colgroup>
+          <colgroup className='col2' span='2'></colgroup>
+          <colgroup className='col3' span='4'></colgroup>
+          <colgroup className='col4' span='3'></colgroup>
+          <tbody>
+            <tr className='division-row'>
+              <th className="header">NFC EAST</th>
+              {headers}
+            </tr>
+          </tbody>
+          {NFCE?.map(({ Name, Conference, Division, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
+            PointsAgainst, NetPoints, TeamID, Team }) => (
+
+            <Row key={TeamID} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+          ))}
+          <br />
+          <tbody>
+            <tr className='division-row'>
+              <th className="header">NFC North</th>
+              {headers}
+            </tr>
+          </tbody>
+          {NFCN?.map(({ Name, Conference, Division, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
+            PointsAgainst, NetPoints, TeamID, Team }) => (
+
+            <Row key={TeamID} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+          ))}
+          <br />
+          <tbody>
+            <tr className='division-row'>
+
+              <th className="header">NFC South</th>
+              {headers}
+            </tr>
+          </tbody>
+          {NFCS?.map(({ Name, Conference, Division, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
+            PointsAgainst, NetPoints, TeamID, Team }) => (
+            <Row key={TeamID} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+          ))}
+          <br />
+          <tbody>
+            <tr className='division-row'>
+              <th className="header">NFC West</th>
+              {headers}
+            </tr>
+          </tbody>
+          {NFCW?.map(({ Name, Conference, Division, Ties, Touchdowns, Losses, Wins, Percentage, ConferenceWins, ConferenceLosses, DivisionWins, DivisionTies, ConferenceTies, DivisionLosses, PointsFor,
+            PointsAgainst, NetPoints, TeamID, Team }) => (
+            <Row key={TeamID} Name={Name} Team={Team} Touchdowns={Touchdowns} DivisionTies={DivisionTies} Ties={Ties} Conference={Conference} Division={Division} Losses={Losses} Wins={Wins} Percentage={Percentage} ConferenceLosses={ConferenceLosses} ConferenceWins={ConferenceWins} ConferenceTies={ConferenceTies} DivisionLosses={DivisionLosses} DivisionWins={DivisionWins} PointsFor={PointsFor} PointsAgainst={PointsAgainst} NetPoints={NetPoints} />
+          ))}
         </table>
 
       </div>
