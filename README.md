@@ -1,5 +1,7 @@
 # Football-react-app
 
+Used React.js and React-Router-dom
+
 Able to filter teams by division / conference plus filter roster by position 
 
 Routing to go to the standings endpoint and the league endpoint
