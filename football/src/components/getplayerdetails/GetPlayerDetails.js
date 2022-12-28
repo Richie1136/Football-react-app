@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { baseUrl } from '../../baseUrl'
 import { useParams } from 'react-router-dom'
 import './GetPlayerDetails.css'
-import Loading from '../loading/Loading'
 
 const GetPlayerDetails = () => {
 
@@ -24,8 +23,6 @@ const GetPlayerDetails = () => {
   }, [])
 
   const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
-
-  if (!getPlayerInfo) return <Loading />
 
   return (
     <div className='player-info-container'>

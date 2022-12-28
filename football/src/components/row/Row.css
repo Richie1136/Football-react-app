@@ -7,6 +7,14 @@
   text-decoration: none;
 }
 
+.Positive {
+  color: #094;
+}
+
+.Negative {
+  color: #d00;
+}
+
 .divwinper {
   width: 64.99px;
 }
