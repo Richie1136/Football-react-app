@@ -1,17 +1,15 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './Navigation.css'
 
-const Navigation = () => {
-  return (
-    <div className='nav'>
-      <NavLink to='/'>
-        <span>Home</span>
-      </NavLink>
-      <NavLink to='/standings'>
-        <span>Standings</span>
-      </NavLink>
-    </div>
-  )
-}
+const Navigation = () => (
+  <nav className='nav'>
+    <NavLink to='/'>
+      <span>Home</span>
+    </NavLink>
+    <NavLink to='/standings'>
+      <span>Standings</span>
+    </NavLink>
+  </nav>
+)
 
 export default Navigation

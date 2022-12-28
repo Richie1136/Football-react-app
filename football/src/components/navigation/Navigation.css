@@ -1,0 +1,10 @@
+a {
+  justify-content: space-between;
+  align-items: left;
+}
+
+nav.nav {
+  color: lime;
+  justify-content: space-evenly;
+  display: flex;
+}

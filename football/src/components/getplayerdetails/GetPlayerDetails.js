@@ -2,14 +2,13 @@ import { useState, useEffect } from 'react'
 import { baseUrl } from '../../baseUrl'
 import { useParams } from 'react-router-dom'
 import './GetPlayerDetails.css'
+import Loading from '../loading/Loading'
 
 const GetPlayerDetails = () => {
   const [getPlayerInfo, setPlayerInfo] = useState([])
   const APIKEY = process.env.REACT_APP_API_KEY
 
   const params = useParams()
-
-
 
   const obj = new URLSearchParams(params)
 
@@ -28,12 +27,12 @@ const GetPlayerDetails = () => {
 
   const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
 
-  // const { Age } = getPlayerInfo
 
-  console.log(getPlayerInfo)
+  if (!getPlayerInfo) return <Loading />
+
 
   return (
-    <>
+    <div className='player-info-container'>
       <div className='player-header'>
         <h1 className='player-header-title'>{FirstName} {LastName}</h1>
         <div className='player-headdr-data'>
@@ -83,14 +82,13 @@ const GetPlayerDetails = () => {
               </li>
               <li className='nfl-player-experience'>
                 <div className='player-info-key'>Drafted</div>
-                <div className='player-info-experience-value'>Pick {CollegeDraftPick} Year {CollegeDraftYear}</div>
+                <div className='player-info-experience-value'>{CollegeDraftPick !== null ? "Pick" : "Player went undrafted"} {CollegeDraftPick !== "null" ? CollegeDraftPick : "Player went undrafted"} Year {CollegeDraftYear}</div>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      {/* <h4>{getPlayerInfo?.Age}</h4> */}
-    </>
+    </div>
   )
 }
 

@@ -91,34 +91,10 @@ th {
 th:not(:first-child) {
   text-align: left;
 }
-/* 
-th:nth-child(10) {
-  border-right: 1px solid #eee;
-} */
 
 .nonConf {
   width: 87.68px;
 }
-
-/* th:first-child {
-  border-right: 4px solid #eee;
-} */
-
-/* th span {
-  display: block;
-} */
-
-/* th.pct::before {
-  background: #000;
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: .04;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}  */
 
 
 .teamw {
@@ -131,59 +107,9 @@ th:nth-child(10) {
   height: 15.5px;
 }
 
-.gb {
-  width: 80.44px;
-  height: 41px;
-  vertical-align: bottom;
-  text-align: justify;
-}
-
-.div {
-width: 78.93px;
-height: 40px;
-}
-
-.tstreak {
-  width: 24px;
-  height: 18px;
-}
-
 .runs {
   width: 32px;
 }
-
-/* .home {
-  width: 89.8px;
-  height: 41px;
-  text-align: justify;
-}
-
-.road {
-  width: 86.34px;
-  height: 41px;
-  text-align: justify;
-} */
-/* 
-.division-title {
-  width: 200px;
-  height: 41px;
-  color: #000;
-  position: sticky;
-left: 0;
-z-index: 5;
-text-align: left;
-font: 10px "Roboto Condensed", Arial, sans-serif;
-padding: 14px 6px;
-background-color: #fff;
-text-align: right;
-letter-spacing: 1px;
-white-space: nowrap;
-vertical-align: bottom;
-display: table-cell;
-font-weight: bold;
-border-top: 1px solid #e5e7eb;
-
-} */
 
 
 .conference-title {
@@ -203,5 +129,5 @@ border-top: 1px solid #e5e7eb;
   height: 48px;
   padding-left: 16px;
   width: 100%;
-  margin-left: 545px;
+  margin-left: 535px;
   }

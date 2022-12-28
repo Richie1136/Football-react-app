@@ -2,6 +2,7 @@ import { baseUrl } from "../../baseUrl"
 import { useState, useEffect } from 'react'
 import Row from "../row/Row"
 import './GetStandings.css'
+import Loading from "../loading/Loading"
 
 
 const GetStandings = () => {
@@ -21,9 +22,8 @@ const GetStandings = () => {
     getCurrentStandings()
   }, [])
 
-  // console.log(GetStandings)
 
-  // console.log(GetStandings?.sort((a, b) => a.Percentage - b.Percentage))
+  if (!GetStandings) return <Loading />
 
 
   let AFCE = GetStandings?.filter((conf) => conf.Conference === 'AFC').filter((div) => div.Division === 'East')
@@ -60,7 +60,7 @@ const GetStandings = () => {
         </span>
       </th>
       <th className='touchdowns'>
-        <span className='tstreak'>
+        <span>
           <span>Touchdowns</span>
         </span>
       </th>

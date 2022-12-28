@@ -8,8 +8,20 @@ body, figure, li {
  padding: 0;
 }
 
+/* body {
+  background-color: #eee;
+} */
+
+/* .container {
+  background-color: #eee;
+} */
+
 div {
   display: block;
+}
+
+.player-info-container {
+  background-color: #eee;
 }
 
 .player-header {
@@ -159,6 +171,8 @@ a,button {
   width: 832.01px;
   height: 267.95px;
   grid-gap: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grid-inner {
