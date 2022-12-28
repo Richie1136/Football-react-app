@@ -4,13 +4,11 @@ import Row from "../row/Row"
 import './GetStandings.css'
 import Loading from "../loading/Loading"
 
-
 const GetStandings = () => {
 
   const [GetStandings, setGetStandings] = useState()
 
   const APIKEY = process.env.REACT_APP_API_KEY
-
   let endPoint = `${baseUrl}/Standings/2022?key=${APIKEY}`
 
   useEffect(() => {
@@ -22,9 +20,7 @@ const GetStandings = () => {
     getCurrentStandings()
   }, [])
 
-
   if (!GetStandings) return <Loading />
-
 
   let AFCE = GetStandings?.filter((conf) => conf.Conference === 'AFC').filter((div) => div.Division === 'East')
   let AFC = GetStandings?.filter((conf) => conf.Conference === 'AFC')
@@ -35,7 +31,6 @@ const GetStandings = () => {
   let NFCN = GetStandings?.filter((conf) => conf.Conference === 'NFC').filter((div) => div.Division === 'North')
   let NFCS = GetStandings?.filter((conf) => conf.Conference === 'NFC').filter((div) => div.Division === 'South')
   let NFCW = GetStandings?.filter((conf) => conf.Conference === 'NFC').filter((div) => div.Division === 'West')
-
 
   let headers = (
     <>
@@ -106,7 +101,6 @@ const GetStandings = () => {
       </th>
     </>
   )
-
 
   return (
 

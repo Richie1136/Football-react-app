@@ -5,7 +5,6 @@ const Row = ({ DivisionLosses, DivisionWins, DivisionTies, Ties, Touchdowns, Poi
   let getDivisionWinPercentage = DivisionWins / (DivisionWins + DivisionLosses)
   let getCunferenceWinPercentage = ConferenceWins / (ConferenceWins + ConferenceLosses)
 
-
   return (
     <tbody>
       <tr className='stats-standings'>

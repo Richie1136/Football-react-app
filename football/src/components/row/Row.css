@@ -2,25 +2,6 @@
   gap: 20px;
   margin-top: 15px;
 }
-
-/* .Positive {
-  color: #094;
-}
-
-.Negative {
-  color: #d00;
-} */
-
-.city-name {
-  width: 200px;
-  align-items: center;
-  display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-
-}
-
 .teamName a {
   color: #333333;
   text-decoration: none;
@@ -92,38 +73,14 @@ td:first-child {
   width: 39.53px;
 }
 
-/* 
-.streak {
-  width: 112.19px;
-  } */
-
   td {
-    /* padding: 8px 6px;
-    font: 14px "Roboto Condensed", Arial, sans-serif;
-background-color: #FFFFFF;
-height: 41px;
-font-weight: 400;
-line-height: 1.25;
-border-style: solid;
-font-weight: 400;
-    font-size: .875rem;
-    font-family: Roboto Condensed,Arial,sans-serif;
-    line-height: 1.25;
-    text-align: left;
-    white-space: nowrap;
-    background-color: #fff;
-    color: #000;
-    border-top: 1px #ebe9e7;
-    font-stretch: condensed; */
     padding: 0 15px;
     border-color: transparent;
     white-space: nowrap;
-    /* text-align: left; */
     position: relative;
     height: 40px;
     color: #333333;
     font: 12px All-ProStats, Helvetica, Arial, sans-serif;
-    /* border-bottom: 1px solid #eee; */
     font-weight: 100;
     border-bottom: 1px solid #eee;
   }

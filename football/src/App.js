@@ -1,15 +1,11 @@
-import './App.css';
-import Nfl from './components/nfl/Nfl';
 import ApplicationRoutes from './routes';
 import Navigation from './components/navigation/Navigation';
 
-function App() {
-  return (
-    <div className="App">
-      <Navigation />
-      <ApplicationRoutes />
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Navigation />
+    <ApplicationRoutes />
+  </div>
+);
 
 export default App;

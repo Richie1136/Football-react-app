@@ -5,16 +5,14 @@ import './GetPlayerDetails.css'
 import Loading from '../loading/Loading'
 
 const GetPlayerDetails = () => {
+
   const [getPlayerInfo, setPlayerInfo] = useState([])
+
   const APIKEY = process.env.REACT_APP_API_KEY
-
   const params = useParams()
-
   const obj = new URLSearchParams(params)
-
   const term = obj.get('playerid')
   const playerURL = `${baseUrl}/Player/${term}?key=${APIKEY}`
-
 
   useEffect(() => {
     const getPlayerDetails = async () => {
@@ -27,9 +25,7 @@ const GetPlayerDetails = () => {
 
   const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
 
-
   if (!getPlayerInfo) return <Loading />
-
 
   return (
     <div className='player-info-container'>

@@ -8,20 +8,13 @@ body, figure, li {
  padding: 0;
 }
 
-/* body {
-  background-color: #eee;
-} */
-
-/* .container {
-  background-color: #eee;
-} */
-
 div {
   display: block;
 }
 
 .player-info-container {
   background-color: #eee;
+  height: 700px;
 }
 
 .player-header {
@@ -99,6 +92,7 @@ height: 100%;
 .img-respomsive {
   width: 350px;
   height: 249.84px;
+  margin-top: 35px;
 }
 
 figure {

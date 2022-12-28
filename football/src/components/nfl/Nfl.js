@@ -2,11 +2,6 @@ import { baseUrl } from '../../baseUrl'
 import { useState, useEffect } from 'react'
 import Card from '../card/Card'
 import './Nfl.css'
-import GetPlayerDetails from '../getplayerdetails/GetPlayerDetails'
-
-// Add filtering by division and conference
-// Working on teamRoster component this way when i click on the team name in this 
-// component it will bring me to the team roster with all of the active players
 
 const Nfl = () => {
 
@@ -15,7 +10,6 @@ const Nfl = () => {
   const [filteredResults, setFilteredResults] = useState(undefined)
 
   const APIKEY = process.env.REACT_APP_API_KEY
-
   let result = `${baseUrl}/Teams?key=${APIKEY}`
 
   useEffect(() => {
@@ -27,13 +21,10 @@ const Nfl = () => {
     getTeams()
   }, [])
 
+  console.log(teams)
 
   let allTeams = teams
   let displayData = allTeams
-
-  console.log(teams)
-
-
   let AFC = teams?.filter((conf) => conf.Conference === 'AFC')
   let AFCE = AFC.filter((div) => div.Division === 'East')
   let AFCN = AFC.filter((div) => div.Division === 'North')
@@ -44,7 +35,6 @@ const Nfl = () => {
   let NFCN = NFC.filter((div) => div.Division === 'North')
   let NFCS = NFC.filter((div) => div.Division === 'South')
   let NFCW = NFC.filter((div) => div.Division === 'West')
-
 
   const handleChange = (event) => {
     setInitialTeams(event.target.value)
@@ -105,7 +95,7 @@ const Nfl = () => {
           <option multiple={false} value={"NFCW"}>NFC West</option>
         </select>
       </label>
-      {displayData.map(({ City, Key, FullName, DefensiveCoordinator, HeadCoach, OffensiveCoordinator, StadiumDetails, PrimaryColor, SecondaryColor, Conference, Division, WikipediaLogoUrl, WikipediaWordMarkUrl }) => (
+      {displayData.map(({ City, Key, FullName, DefensiveCoordinator, HeadCoach, OffensiveCoordinator, SpecialTeamsCoach, StadiumDetails, PrimaryColor, SecondaryColor, Conference, Division, WikipediaLogoUrl, WikipediaWordMarkUrl }) => (
         <Card key={Key}>
           <div>
             <h2 className='teamCity'><a style={{ 'color': '#' + PrimaryColor }} href={`/${Key}`}>{FullName}</a></h2>
@@ -114,8 +104,10 @@ const Nfl = () => {
             <h5 className='headCoach' style={{ 'color': '#' + PrimaryColor }}>Head Coach: {HeadCoach}</h5>
             <h5 className='oc' style={{ 'color': '#' + PrimaryColor }}>Offensive Coordinator: {OffensiveCoordinator === null ? "No Offensive Coordinator" : OffensiveCoordinator}</h5>
             <h5 className='dc' style={{ 'color': '#' + PrimaryColor }}>Defensive Coordinator: {DefensiveCoordinator === null ? "No Denfensive Coordinator" : DefensiveCoordinator}</h5>
+            <h5 className='dc' style={{ 'color': '#' + PrimaryColor }}>Special Teams Coach: {SpecialTeamsCoach}</h5>
             <h4>Stadium Details</h4>
             <h5 className='stadiumName' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.Name}</h5>
+            <h5 className='stadiumName' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.Capacity.toLocaleString('en-US')}</h5>
             <h5 className='stadiumLocation' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.City}, {StadiumDetails?.State}</h5>
             <h5 className='stadiumSurface' style={{ 'color': '#' + PrimaryColor }}>Playing Surface: {StadiumDetails?.PlayingSurface}</h5>
             <h5 className='stadiumType' style={{ 'color': '#' + PrimaryColor }}>Stadium Type: {StadiumDetails?.Type}</h5>

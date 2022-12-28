@@ -5,26 +5,17 @@ import Card from "../card/Card"
 import './TeamRoster.css'
 import Loading from "../loading/Loading"
 
-
 const TeamRoster = () => {
+
   const [roster, setRoster] = useState()
   const [initialRoster, setInitialRoster] = useState(roster)
   const [filteredResults, setFilteredResults] = useState(undefined)
 
   const APIKEY = process.env.REACT_APP_API_KEY
-
   const params = useParams()
-
   const obj = new URLSearchParams(params)
-
   const term = obj.get('team')
-
-
   let endpoint = `${baseUrl}/Players/${term}?key=${APIKEY}`
-
-  // Add ability to filter by position
-
-
 
   useEffect(() => {
     const retrieveRoster = async () => {
@@ -38,10 +29,7 @@ const TeamRoster = () => {
   let wholeRoster = roster?.filter((status) => status.Status === 'Active')
   let displayData = wholeRoster
 
-  console.log(roster)
-
   if (!roster) return <Loading />
-
 
   let Offense = wholeRoster?.filter((position) => position.PositionCategory === 'OFF')
   let QuarterBacks = wholeRoster?.filter((position) => position.Position === 'QB')
@@ -67,7 +55,6 @@ const TeamRoster = () => {
   let Kicker = wholeRoster?.filter((position) => position.Position === 'K')
   let Punter = wholeRoster?.filter((position) => position.Position === 'P')
   let LongSnapper = wholeRoster?.filter((position) => position.Position === 'LS')
-
 
   const handleChange = (event) => {
     setInitialRoster(event.target.value)
@@ -164,7 +151,6 @@ const TeamRoster = () => {
   let doHaveOLB = OutsideLineBackers.length > 0 ? "Outside Linebacker" : "N/A"
   let doHaveILB = InsideLineBackers.length > 0 ? "Inside Linebacker" : "N/A"
 
-
   return (
     <div className="container">
       <label>
@@ -197,8 +183,6 @@ const TeamRoster = () => {
           <option multiple={false} value={"Kicker"}>Kicker</option>
           <option multiple={false} value={"Punter"}>Punter</option>
           <option multiple={false} value={"LongSnapper"}>Long Snapper</option>
-
-
         </select>
       </label>
       {displayData?.map(({ FirstName, PlayerID, LastName, Number, Age, BirthDate, College, Height, Position, PhotoUrl, Weight, ExperienceString }) => (
