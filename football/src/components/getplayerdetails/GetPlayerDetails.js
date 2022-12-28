@@ -26,7 +26,7 @@ const GetPlayerDetails = () => {
     getPlayerDetails()
   }, [])
 
-  const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftRound, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
+  const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
 
   // const { Age } = getPlayerInfo
 
