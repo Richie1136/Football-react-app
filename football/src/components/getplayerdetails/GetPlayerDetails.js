@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react'
 import { baseUrl } from '../../baseUrl'
 import { useParams } from 'react-router-dom'
 import './GetPlayerDetails.css'
+import Loading from '../loading/Loading'
 
 const GetPlayerDetails = () => {
 
-  const [getPlayerInfo, setPlayerInfo] = useState([])
+  const [getPlayerInfo, setPlayerInfo] = useState()
 
   const APIKEY = process.env.REACT_APP_API_KEY
   const params = useParams()
@@ -21,6 +22,8 @@ const GetPlayerDetails = () => {
     }
     getPlayerDetails()
   }, [])
+
+  if (!getPlayerInfo) return <Loading />
 
   const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
 
