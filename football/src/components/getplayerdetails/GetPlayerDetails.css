@@ -3,7 +3,7 @@
 }
 
 
-body {
+body, figure, li {
  margin: 0;
  padding: 0;
 }
@@ -113,7 +113,7 @@ width: max-content;
 }
 
 .player-header-title {
-  width: 263.24px;
+  /* width: 263.24px; */
   height: 37.99px;
   color: #333333;
   margin: 0 0 8px;
@@ -122,6 +122,59 @@ width: max-content;
   font-weight: 700;
   line-height: 28px;
   margin-bottom: 8px;
+  /* text-align: left; */
+}
+
+.section-row-player-header {
+  width: 1321.11px;
+  height: 256px;
+  background-color: #fff;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-family: All-ProSans,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  width: 100%;
+}
+
+.player-header-content {
+  width: 1321.11px;
+  height: 256px;
+  color: #333;
+  font-family: All-ProSans,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.player-header-headshot {
+width: 528.44px;
+height: 255px;
+height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+}
+.img-respomsive {
+  width: 350px;
+  height: 249.84px;
+}
+
+figure {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+
+img {
+  border: 0;
+    height: auto;
+    max-width: 100%;
 }
 
 h1 {
@@ -131,7 +184,7 @@ h1 {
 }
 
 .player-headdr-data {
-  width: 66.33px;
+  /* width: 66.33px; */
   height: 20px;
   color:#333333;
   font-size: 16px;
@@ -155,9 +208,10 @@ font-size: 16px;
 }
 
 .player-header-team {
-  width: 115.21px;
+  /* width: 115.21px; */
   height: 20px;
   line-height: 20px;
+  /* text-align: left; */
 }
 
 .rosterlink {
@@ -292,10 +346,18 @@ a,button {
   flex-basis: 50%;
 }
 
+.player-info-experience-value {
+  width: 400px;
+  height: 17.99px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  display: flex;
+    flex-basis: 100%;
+}
+
 li {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 ul {
@@ -317,28 +379,6 @@ ul {
   margin-top: 70px;
   border-bottom: 1px solid gray;
   display: inline-block;
-}
-
-li {
-  margin-top: 0;
-}
-
-h4.players-birthday {
-  width: 200px;
-  font-size: 16px;
-  display: flex;
-  margin-left: -38px;
-}
-
-.noSalaryFound {
-  width: 200px;
-  margin-left: -30px;
-}
-
-.players-birthcountry {
-  width: 300px;
-  flex-wrap: nowrap;
-  margin-left: -40px;
 }
 
 div {

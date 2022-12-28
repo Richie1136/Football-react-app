@@ -26,7 +26,7 @@ const GetPlayerDetails = () => {
     getPlayerDetails()
   }, [])
 
-  const { FirstName, LastName, BirthDateString, FullName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftRound, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
+  const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftRound, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
 
   // const { Age } = getPlayerInfo
 
@@ -42,6 +42,11 @@ const GetPlayerDetails = () => {
         <div className='player-header-team'>
           <a className='rosterlink' href={`/${Team}`}>{Team}</a>
         </div>
+        <figure className='player-header-headshot'>
+          <picture>
+            <img className='img-respomsive' src={PhotoUrl} alt='Player img' />
+          </picture>
+        </figure>
       </div>
       <section className='player-info-section'>
         <div className='grid-inner'>
@@ -66,7 +71,19 @@ const GetPlayerDetails = () => {
             <ul className='nfl-player-info-career-data'>
               <li className='nfl-player-experience'>
                 <div className='player-info-key'>Experience</div>
-                <div className='player-info-value' style={{ 'fontWeight': '400' }}>{ExperienceString}</div>
+                <div className='player-info-experience-value'>{ExperienceString}</div>
+              </li>
+              <li className='nfl-player-experience'>
+                <div className='player-info-key'>College</div>
+                <div className='player-info-experience-value'>{College}</div>
+              </li>
+              <li className='nfl-player-experience'>
+                <div className='player-info-key'>Age</div>
+                <div className='player-info-experience-value'>{Age}</div>
+              </li>
+              <li className='nfl-player-experience'>
+                <div className='player-info-key'>Drafted</div>
+                <div className='player-info-experience-value'>Pick {CollegeDraftPick} Year {CollegeDraftYear}</div>
               </li>
             </ul>
           </div>
