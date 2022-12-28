@@ -21,8 +21,6 @@ const Nfl = () => {
     getTeams()
   }, [])
 
-  console.log(teams)
-
   let allTeams = teams
   let displayData = allTeams
   let AFC = teams?.filter((conf) => conf.Conference === 'AFC')
@@ -107,7 +105,7 @@ const Nfl = () => {
             <h5 className='dc' style={{ 'color': '#' + PrimaryColor }}>Special Teams Coach: {SpecialTeamsCoach}</h5>
             <h4>Stadium Details</h4>
             <h5 className='stadiumName' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.Name}</h5>
-            <h5 className='stadiumName' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.Capacity.toLocaleString('en-US')}</h5>
+            <h5 className='stadiumName' style={{ 'color': '#' + PrimaryColor }}>Capacity: {StadiumDetails?.Capacity.toLocaleString('en-US')}</h5>
             <h5 className='stadiumLocation' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.City}, {StadiumDetails?.State}</h5>
             <h5 className='stadiumSurface' style={{ 'color': '#' + PrimaryColor }}>Playing Surface: {StadiumDetails?.PlayingSurface}</h5>
             <h5 className='stadiumType' style={{ 'color': '#' + PrimaryColor }}>Stadium Type: {StadiumDetails?.Type}</h5>
