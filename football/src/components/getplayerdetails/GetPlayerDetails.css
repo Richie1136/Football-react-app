@@ -8,10 +8,6 @@ body, figure, li {
  padding: 0;
 }
 
-div {
-  display: block;
-}
-
 .player-info-container {
   background-color: #eee;
   height: 700px;
@@ -21,21 +17,10 @@ div {
   width: 623.94px;
   height: 255px;
   padding: 40px 0 20px 10px;
-  display: flex;
   margin-top: 40px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  max-height: 255px;
-  min-height: 255px;
-  padding: 40px 0 20px 10px;
   width: 50%;
   z-index: 2;
   color: #333;
@@ -132,12 +117,6 @@ h1 {
     font-weight: 700;
 }
 
-span {
-width: 102.88px;
-height: 16.11px;
-font-size: 16px;
-}
-
 .player-header-team {
   height: 20px;
   line-height: 20px;
@@ -147,18 +126,6 @@ font-size: 16px;
   width: 115.21px;
   height: 13.89px;
   color: #1B48E0;
-}
-
-a[href]:not([title]) {
-  outline: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-a,button {
-  transition: 3s;
 }
 
 .player-info-section {
@@ -266,12 +233,4 @@ a,button {
 
 li {
   list-style-type: none;
-}
-
-ul {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
 }

@@ -21,8 +21,6 @@ const Nfl = () => {
     getTeams()
   }, [])
 
-  console.log(teams)
-
   let allTeams = teams
   let displayData = allTeams
   let AFC = teams?.filter((conf) => conf.Conference === 'AFC')
