@@ -11,30 +11,11 @@ img {
 .headCoach {
   text-align: left;
 }
-.dc {
+.coaches {
   text-align: left;
   margin-top: -15px;
 }
-.oc {
-  text-align: left;
-  margin-top: -15px;
-}
-.stadiumName {
-  text-align: left;
-  margin-top: -15px;
-
-}
-.stadiumLocation {
-  text-align: left;
-  margin-top: -15px;
-
-}
-.stadiumSurface {
-  text-align: left;
-  margin-top: -15px;
-
-}
-.stadiumType {
+.stadium {
   text-align: left;
   margin-top: -15px;
 

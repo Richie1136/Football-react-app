@@ -21,6 +21,8 @@ const Nfl = () => {
     getTeams()
   }, [])
 
+  console.log(teams)
+
   let allTeams = teams
   let displayData = allTeams
   let AFC = teams?.filter((conf) => conf.Conference === 'AFC')
@@ -84,31 +86,31 @@ const Nfl = () => {
           <option multiple={false} value={"AFCN"}>AFC North</option>
           <option multiple={false} value={"AFCS"}>AFC South</option>
           <option multiple={false} value={"AFCW"}>AFC West</option>
+          <option multiple={false} value={"AFC"}>- - -</option>
           <option multiple={false} value={"NFC"}>NFC</option>
           <option multiple={false} value={"NFC"}>- - -</option>
-          <option multiple={false} value={"NFCE"}>NFC East</option>
           <option multiple={false} value={"NFCE"}>NFC East</option>
           <option multiple={false} value={"NFCN"}>NFC North</option>
           <option multiple={false} value={"NFCS"}>NFC South</option>
           <option multiple={false} value={"NFCW"}>NFC West</option>
         </select>
       </label>
-      {displayData.map(({ City, Key, FullName, DefensiveCoordinator, HeadCoach, OffensiveCoordinator, SpecialTeamsCoach, StadiumDetails, PrimaryColor, SecondaryColor, Conference, Division, WikipediaLogoUrl, WikipediaWordMarkUrl }) => (
+      {displayData.map(({ City, Key, FullName, DefensiveCoordinator, HeadCoach, OffensiveCoordinator, SpecialTeamsCoach, StadiumDetails, PrimaryColor, Conference, Division, WikipediaLogoUrl }) => (
         <Card key={Key}>
           <div>
             <h2 className='teamCity'><a style={{ 'color': '#' + PrimaryColor }} href={`/${Key}`}>{FullName}</a></h2>
             <h4>{Conference} {Division}</h4>
             <img src={WikipediaLogoUrl} alt='team-logo' />
             <h5 className='headCoach' style={{ 'color': '#' + PrimaryColor }}>Head Coach: {HeadCoach}</h5>
-            <h5 className='oc' style={{ 'color': '#' + PrimaryColor }}>Offensive Coordinator: {OffensiveCoordinator === null ? "No Offensive Coordinator" : OffensiveCoordinator}</h5>
-            <h5 className='dc' style={{ 'color': '#' + PrimaryColor }}>Defensive Coordinator: {DefensiveCoordinator === null ? "No Denfensive Coordinator" : DefensiveCoordinator}</h5>
-            <h5 className='dc' style={{ 'color': '#' + PrimaryColor }}>Special Teams Coach: {SpecialTeamsCoach}</h5>
+            <h5 className='coaches' style={{ 'color': '#' + PrimaryColor }}>Offensive Coordinator: {OffensiveCoordinator === null ? "No Offensive Coordinator" : OffensiveCoordinator}</h5>
+            <h5 className='coaches' style={{ 'color': '#' + PrimaryColor }}>Defensive Coordinator: {DefensiveCoordinator === null ? "No Denfensive Coordinator" : DefensiveCoordinator}</h5>
+            <h5 className='coaches' style={{ 'color': '#' + PrimaryColor }}>Special Teams Coach: {SpecialTeamsCoach}</h5>
             <h4>Stadium Details</h4>
-            <h5 className='stadiumName' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.Name}</h5>
-            <h5 className='stadiumName' style={{ 'color': '#' + PrimaryColor }}>Capacity: {StadiumDetails?.Capacity.toLocaleString('en-US')}</h5>
-            <h5 className='stadiumLocation' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.City}, {StadiumDetails?.State}</h5>
-            <h5 className='stadiumSurface' style={{ 'color': '#' + PrimaryColor }}>Playing Surface: {StadiumDetails?.PlayingSurface}</h5>
-            <h5 className='stadiumType' style={{ 'color': '#' + PrimaryColor }}>Stadium Type: {StadiumDetails?.Type}</h5>
+            <h5 className='stadium' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.Name}</h5>
+            <h5 className='stadium' style={{ 'color': '#' + PrimaryColor }}>Capacity: {StadiumDetails?.Capacity.toLocaleString('en-US')}</h5>
+            <h5 className='stadium' style={{ 'color': '#' + PrimaryColor }}>{StadiumDetails?.City}, {StadiumDetails?.State}</h5>
+            <h5 className='stadium' style={{ 'color': '#' + PrimaryColor }}>Playing Surface: {StadiumDetails?.PlayingSurface}</h5>
+            <h5 className='stadium' style={{ 'color': '#' + PrimaryColor }}>Stadium Type: {StadiumDetails?.Type}</h5>
           </div>
         </Card>
       ))}

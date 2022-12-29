@@ -29,6 +29,8 @@ const TeamRoster = () => {
   let wholeRoster = roster?.filter((status) => status.Status === 'Active')
   let displayData = wholeRoster
 
+  console.log(roster)
+
   if (!roster) return <Loading />
 
   let Offense = wholeRoster?.filter((position) => position.PositionCategory === 'OFF')
