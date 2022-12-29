@@ -25,7 +25,7 @@ const GetPlayerDetails = () => {
 
   if (!getPlayerInfo) return <Loading />
 
-  const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, CollegeDraftPick, CollegeDraftYear, PhotoUrl, Position, Weight } = getPlayerInfo
+  const { FirstName, LastName, Team, Number, Age, ExperienceString, HeightFeet, HeightInches, College, PhotoUrl, Position, Weight } = getPlayerInfo
 
   return (
     <div className='player-info-container'>
@@ -75,10 +75,6 @@ const GetPlayerDetails = () => {
               <li className='nfl-player-experience'>
                 <div className='player-info-key'>Age</div>
                 <div className='player-info-experience-value'>{Age}</div>
-              </li>
-              <li className='nfl-player-experience'>
-                <div className='player-info-key'>Drafted</div>
-                <div className='player-info-experience-value'>{CollegeDraftPick !== null ? "Pick" : "Player went undrafted"} {CollegeDraftPick !== "null" ? CollegeDraftPick : "Player went undrafted"} Year {CollegeDraftYear}</div>
               </li>
             </ul>
           </div>
