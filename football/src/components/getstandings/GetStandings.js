@@ -1,8 +1,7 @@
 import { baseUrl } from "../../baseUrl"
 import { useState, useEffect } from 'react'
-import Row from "../row/Row"
 import './GetStandings.css'
-import Loading from "../loading/Loading"
+import { Row, Loading } from '../index'
 
 const GetStandings = () => {
 

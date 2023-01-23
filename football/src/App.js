@@ -1,4 +1,4 @@
-import ApplicationRoutes from './routes';
+import ApplicationRoutes from './components/routes';
 import Navigation from './components/navigation/Navigation';
 
 const App = () => (

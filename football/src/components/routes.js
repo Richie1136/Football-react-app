@@ -1,8 +1,5 @@
-import TeamRoster from "./components/teamroster/TeamRoster";
-import Nfl from "./components/nfl/Nfl";
 import { Routes, Route } from 'react-router-dom'
-import GetStandings from "./components/getstandings/GetStandings";
-import GetPlayerDetails from "./components/getplayerdetails/GetPlayerDetails";
+import { TeamRoster, Nfl, GetStandings, GetPlayerDetails } from './index'
 
 const ApplicationRoutes = () => (
   <>
