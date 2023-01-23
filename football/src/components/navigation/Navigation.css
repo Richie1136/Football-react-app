@@ -1,10 +1,10 @@
-a {
+nav a {
   justify-content: space-between;
   align-items: left;
+  background-color:#F0E7E7
 }
 
 nav.nav {
-  color: lime;
   justify-content: space-evenly;
   display: flex;
 }
